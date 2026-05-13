@@ -1,12 +1,27 @@
+import Header from './components/layout/Header'
+import Footer from './components/layout/Footer'
+
+import Hero from './components/ux/Hero'
+import NewThisWeek from './components/ux/NewThisWeek'
+import FeaturedBands from './components/ux/FeaturedBand'
+import LatestArticles from './components/ux/LatestArticles'
+import EmailSignup from './components/ux/EmailSignup'
+
+
+
 
 export default function Home() {
   return (
-    <main className="">
-      <header className="p-6 border-b">
-        <h2>Music Storm</h2>
-      </header>
-      <h1 className="text-3xl">Music Storm</h1>
-      <h2>Welcome to the storm</h2>
-    </main>
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <NewThisWeek />
+        <FeaturedBands />
+        <LatestArticles />
+        <EmailSignup />
+      </main>
+      <Footer />
+    </>
   );
 }
