@@ -25,3 +25,34 @@
   font-weight: 700;
   font-style: italic;
 }
+
+/* Skip link styles for keyboard users */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  background: white;
+  color: black;
+  z-index: 50;
+  border-radius: 0.25rem;
+}
+
+/* Improve focus-visible outlines for interactive elements */
+:where(a, button) :focus-visible {
+  outline: none;
+}
+
+:focus-visible {
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.25);
+}
