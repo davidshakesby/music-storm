@@ -16,6 +16,7 @@ export default function FeaturedBands() {
               title={band.name}
               description={band.description}
               //image={band.image}
+              category={band.category}
             />
           )
         ))}

@@ -5,6 +5,7 @@ export const featuredBands = [
         slug: "neck-deep",
         description: "Neck Deep is a Welsh pop punk band formed in 2012. They are known for their energetic performances and catchy melodies.",
         image: "/images/neck_deep.jpg",
+        category: "Pop Punk",
         featured: false,
     },
     {
@@ -13,6 +14,7 @@ export const featuredBands = [
         slug: "against-the-current",
         description: "Against The Current is an American pop rock band formed in 2011. They are known for their powerful vocals and dynamic sound.",
         image: "/images/against_the_current.jpg",
+        category: "Pop Punk",
         featured: true,
     },
     {
@@ -22,6 +24,7 @@ export const featuredBands = [
         slug: "state-champs",
         description: "State Champs is an American pop punk band formed in 2010. They are known for their high-energy performances and catchy hooks.",
         image: "/images/state_champs.jpg",
+        category: "Pop Punk",
         featured: false,
     },
     {
@@ -30,6 +33,7 @@ export const featuredBands = [
         slug: "the-story-so-far",
         description: "The Story So Far is an American pop punk band formed in 2007. They are known for their heartfelt lyrics and melodic sound.",          
         image: "/images/the_story_so_far.jpg",
+        category: "Pop Punk",
         featured: true,
     },
     {
@@ -38,6 +42,7 @@ export const featuredBands = [
         slug: "beauty-school",
         description: "Beauty School is an emo-influenced pop punk band formed in 2018. They are known for their emotional lyrics and energetic performances.",
         image: "/images/beauty_school.jpg",
+        category: "Pop Punk",
         featured: true,
     }
 ]
