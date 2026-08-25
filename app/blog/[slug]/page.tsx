@@ -22,9 +22,12 @@ export default async function Blog(
         {article.category} • {article.publishedAt}
       </p>
 
-      <p className="mt-8">
-        {article.category}
-      </p>
+    {article.content.map((paragraph, index) => (
+    <p key={index} className="mb-6">
+      {paragraph}
+    </p>
+  ))}
+    
     </main>
   );
 }
