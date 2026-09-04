@@ -1,4 +1,4 @@
-import { articles } from "@/app/data/articles";
+import { featuredBands } from "@/app/data/FeaturedBands";
 import { notFound } from "next/navigation";
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
@@ -11,7 +11,7 @@ export default async function Blog(
 ) {
   const { slug } = await props.params;
 
-  const article = articles.find(
+  const article = featuredBands.find(
     (article) => article.slug === slug
   );
 
@@ -23,18 +23,18 @@ export default async function Blog(
     <>
     <Header />
     <main className="container mx-auto py-12">
-    <Image className="mb-4 w-full h-70 object-cover" src={`/images/${article.image}`} height={400} width={600} alt="Artist Image"  />      
-    <h1 className="text-4xl font-bold">{article.title}</h1>
+    <Image className="mb-8 w-full h-100 object-cover" src={`/images/${article.banner}`} height={400} width={600} alt="Artist Image"  />      
+    <h1 className="text-4xl font-bold mb-8">{article.name}</h1>
 
-      <p className="mt-2 text-gray-500">
-        {article.category} • {article.publishedAt}
-      </p>
-
-    {article.content.map((paragraph, index) => (
+    {article.text.map((paragraph, index) => (
     <p key={index} className="mb-6">
       {paragraph}
     </p>
   ))}
+
+  {/* <p>
+    {article.description}
+  </p> */}
     
     </main>
     <Footer />

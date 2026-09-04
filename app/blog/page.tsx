@@ -24,7 +24,8 @@ export default function BlogPage() {
                                 title={blog.title}
                                 description={blog.excerpt}
                                 image={blog.image}
-                                category={blog.category} />
+                                category={blog.category}
+                                slug={blog.slug} />
                         </Link>
                     ))}
                 </div>
