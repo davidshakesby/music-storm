@@ -22,19 +22,32 @@ export default async function Blog(
   return (
     <>
     <Header />
-    <main className="container mx-auto py-12">
+    <main className="w-full max-w-5xl mx-auto px-6 py-12">
     <Image className="mb-4 w-full h-70 object-cover" src={`/images/${article.image}`} height={400} width={600} alt="Artist Image"  />      
-    <h1 className="text-4xl font-bold">{article.title}</h1>
+    <h1 className="text-4xl font-bold mb-2">{article.title}</h1>
 
-      <p className="mt-2 text-gray-500">
-        {article.category} • {article.publishedAt}
+      <p className="mb-4 text-gray-500">
+        {article.category} • {article.publishedAt} • Writen by: {article.author}
       </p>
 
-    {article.content.map((paragraph, index) => (
-    <p key={index} className="mb-6">
+  {article.content.map((paragraph, index) => {
+  if (paragraph.startsWith("## ")) {
+    return (
+      <h2
+        key={index}
+        className="text-2xl font-bold mt-6 mb-4"
+      >
+        {paragraph.replace("## ", "")}
+      </h2>
+    );
+  }
+
+  return (
+    <p key={index} className="mb-4 leading-7">
       {paragraph}
     </p>
-  ))}
+  );
+})}
     
     </main>
     <Footer />

@@ -18,8 +18,8 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/playlist" className="hover:underline">
-              Playlist
+            <Link href="/artist" className="hover:underline">
+              Artist
             </Link>
           </li>
         </ul>

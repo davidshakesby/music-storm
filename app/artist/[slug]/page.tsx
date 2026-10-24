@@ -11,31 +11,32 @@ export default async function Blog(
 ) {
   const { slug } = await props.params;
 
-  const article = featuredBands.find(
-    (article) => article.slug === slug
+  const band = featuredBands.find(
+    (band) => band.slug === slug
   );
 
-  if (!article) {
+  if (!band) {
     notFound();
   }
 
   return (
     <>
     <Header />
-    <main className="container mx-auto py-12">
-    <Image className="mb-8 w-full h-100 object-cover" src={`/images/${article.banner}`} height={400} width={600} alt="Artist Image"  />      
-    <h1 className="text-4xl font-bold mb-8">{article.name}</h1>
+    <main className="w-full max-w-5xl mx-auto px-6 py-12">
+    <Image className="mb-8 w-full h-100 object-cover" src={`/images/${band.banner}`} height={400} width={600} alt="Artist Image"  />      
+    <h1 className="text-4xl font-bold mb-8">{band.name}</h1>
+    <div className="mb-5">
+      <p>Genre: {band.category}</p>
+      <p>Formed: {band.formed}</p>
+      <p>Location: {band.location} </p>
+    </div>
 
-    {article.text.map((paragraph, index) => (
+    {band.text.map((paragraph, index) => (
     <p key={index} className="mb-6">
       {paragraph}
     </p>
   ))}
 
-  {/* <p>
-    {article.description}
-  </p> */}
-    
     </main>
     <Footer />
     </>

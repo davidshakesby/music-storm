@@ -1,5 +1,5 @@
 import { featuredBands } from "@/app/data/FeaturedBands";
-import Card from "./Card";
+import ArtistCard from "./ArtistCard";
 
 export default function FeaturedBands() {
   return (
@@ -11,7 +11,7 @@ export default function FeaturedBands() {
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {featuredBands.map((band) => (
           band.featured && (
-            <Card
+            <ArtistCard
               key={band.id}
               title={band.name}
               description={band.description}

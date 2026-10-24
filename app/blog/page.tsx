@@ -14,7 +14,7 @@ export default function BlogPage() {
         <Header />
             <main className="container mx-auto px-6 py-12">
                 <h1 className="text-4xl font-bold mb-5">Latest Articles</h1>
-                <p>News, reviews, interview and playlists from the pop punk scene.</p>
+                <p className="mb-5">News, reviews, interview and playlists from the pop punk scene.</p>
 
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {articles.map((blog) => (
