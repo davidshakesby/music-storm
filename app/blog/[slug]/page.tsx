@@ -1,9 +1,31 @@
+import type { Metadata } from "next";
 import { articles } from "@/app/data/articles";
 import { notFound } from "next/navigation";
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 
 import Image from "next/image";
+
+export async function generateMetadata(
+  props: PageProps<"/blog/[slug]">
+): Promise<Metadata> {
+  const { slug } = await props.params;
+
+  const article = articles.find(
+    (article) => article.slug === slug
+  );
+
+  if (!article) {
+    return {
+      title: "Article Not found | Music Storm"
+    };
+  }
+
+  return {
+    title: `${article.title} | Music Storm`,
+    description: article.excerpt,
+  }
+}
 
 
 export default async function Blog(

@@ -1,10 +1,16 @@
 /* eslint-disable react/jsx-key */
+import type { Metadata } from "next";
 import { articles } from "@/app/data/articles";
 import Card from "../components/ux/Card";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 
 import Link from "next/link";
+
+export const metadata: Metadata = {
+    title: "Articles | Music Storm",
+    description: "News, reviews, interview and playlists from the pop punk scene."
+}
 
 
 

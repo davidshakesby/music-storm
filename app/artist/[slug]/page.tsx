@@ -1,9 +1,31 @@
+import type { Metadata } from "next";
 import { featuredBands } from "@/app/data/FeaturedBands";
 import { notFound } from "next/navigation";
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 
-import Image from "next/image";
+import Image from "next/image";export async function generateMetadata(
+  props: PageProps<"/blog/[slug]">
+): Promise<Metadata> {
+  const { slug } = await props.params;
+
+  const band = featuredBands.find(
+    (band) => band.slug === slug
+  );
+
+  if (!band) {
+    return {
+      title: "Band Not found | Music Storm"
+    };
+  }
+
+  return {
+    title: `${band.name} | Music Storm`,
+    description: band.description,
+  }
+}
+
+
 
 
 export default async function Blog(

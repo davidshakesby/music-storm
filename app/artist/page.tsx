@@ -3,10 +3,14 @@ import { featuredBands } from "@/app/data/FeaturedBands";
 import ArtistCard from "../components/ux/ArtistCard";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
+import type { Metadata } from "next";
 
 import Link from "next/link";
 
-
+export const metadata: Metadata = {
+    title: "Artists | Music Storm",
+    description: "Here are our selected artist that you need to check"
+}
 
 export default function ArtistPage() {
     return (
