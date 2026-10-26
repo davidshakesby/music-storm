@@ -22,6 +22,9 @@ const caudex = Caudex({
 export const metadata: Metadata = {
   title: "Music Storm | Pop-punk music, Reviews & Discoveries",
   description: "Discover pop-punk music, explore band profiles, and read album reviews, rankings, and the latest scene stories on Music Storm",
+  verification: {
+  google: "nzxVAdQsD7TQpQwRmVOcMpKYc33d842eX-PY-lRg6_E",
+},
 };
 
 export default function RootLayout({
