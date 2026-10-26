@@ -3,7 +3,7 @@ import { articles } from "./data/articles";
 import { featuredBands } from "./data/FeaturedBands";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = "https://example/com";
+    const baseUrl = "https://music-storm-five.vercel.app";
 
     const articleUrls = articles.map((article) => ({
         url: `${baseUrl}/blog/${article.slug}`,
